@@ -47,7 +47,7 @@ module Lita
 
       private
       def format(tweet)
-        "\"#{tweet.text}\" \u{00b7} #{tweet.user.name} \u{00b7} #{tweet.created_at.localtime.strftime('%Y-%m-%d %H:%M')}"
+        "\"#{tweet.text}\" \u{00b7} #{tweet.user.name} \u{00b7} #{tweet.created_at.dup.localtime.strftime('%Y-%m-%d %H:%M')}"
       end
     end
 
